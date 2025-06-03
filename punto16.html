@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function verificarIngreso() {
+            var edad = parseInt(prompt("Ingrese su edad:"));
+            var documento = prompt("¿Tiene documento? (si/no)").toLowerCase();
+            var pago = prompt("¿Pagó la entrada? (si/no)").toLowerCase();
+
+            if (edad < 18) {
+                alert("No podés ingresar porque sos menor de edad.");
+            } else if (documento !== "si") {
+                alert("No podés ingresar porque no tenés documento.");
+            } else if (pago !== "si") {
+                alert("No podés ingresar porque no pagaste la entrada.");
+            } else {
+                alert("¡Bienvenido! Puedes ingresar al boliche.");
+            }
+        }
+
+        verificarIngreso();
+    </script>
+</head>
+<body>
+</body>
+</html>
