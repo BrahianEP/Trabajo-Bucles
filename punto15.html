@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function cajeroAutomatico() {
+            var saldo = 5000; 
+
+            alert("Bienvenido al cajero automático.\nSaldo disponible: $" + saldo);
+
+            var montoRetiro = parseFloat(prompt("Ingrese el monto a retirar:"));
+
+            if (!isNaN(montoRetiro) && montoRetiro > 0) {
+                if (montoRetiro <= saldo) {
+                    saldo -= montoRetiro;
+                    alert("Retiro exitoso.\nSaldo restante: $" + saldo);
+                } else {
+                    alert("Error: Fondos insuficientes.\nSaldo disponible: $" + saldo);
+                }
+            } else {
+                alert("Error: Ingrese un monto válido.");
+            }
+        }
+
+        cajeroAutomatico();
+    </script>
+</head>
+<body>
+</body>
+</html>
